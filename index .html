@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #con{
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            background-color:orange;
+            transition: 2s;
+            
+           
+        }
+        #a{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 8px;
+            color: red;
+
+        }
+        #b{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 8px;
+            color: red;
+        }
+        #s{
+            width: 100px;
+            height: 35px;
+            font-size: 20px;
+            background-color: blue;
+            color: yellow;
+        }
+        #c{
+            color: green;
+        }
+        
+        #d{
+            color: blue;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="con">
+    <h1>Discount</h1>
+    <input type="text" placeholder="Enter original price" id="a">  
+    <br><br>
+    <input type="text" placeholder="Enter Discount(% off)" id="b" >
+    <br><br>
+    <input type="button" value="FinalPrize" onclick="discount()" id="s">
+    <br><br><br><br><br>
+    <h1 id="c"></h1>
+    <h1 id="d"></h1>
+    </div>
+    
+<script>
+    function discount()
+    {
+        var a=document.getElementById("a").value
+        var b=document.getElementById("b").value
+        var d=document.getElementById("c").value=parseInt(a)
+        var d1=document.getElementById("c").value=parseInt(b)
+
+         var s= d*d1/100
+         var final=a-s;
+         document.getElementById("c").innerHTML="final prize ="+final+"/-"
+         document.getElementById("d").innerHTML="You Save:"+s+"/-"
+        if(a==""&&b=="")
+        {
+            document.getElementById("c").innerHTML="Enter Input.."
+        }
+       
+
+    }
+</script>
+</body>
+</html>
